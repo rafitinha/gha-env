@@ -25,5 +25,5 @@ jobs:
           node-version: ${{ matrix.node-version}}
       - name: Install Dependencies
         run: npm ci
-      - name: Run Project in Test Mode
-        run: npm run test
+  deploy:
+    uses: ./.github/workflow/resuable.yml
