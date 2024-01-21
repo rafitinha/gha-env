@@ -26,4 +26,4 @@ jobs:
       - name: Install Dependencies
         run: npm ci
   deploy:
-    uses: ./.github/workflows/resuable.yml
+    uses: ./.github/workflows/reusable.yml
