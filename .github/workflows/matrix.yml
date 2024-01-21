@@ -1,5 +1,9 @@
 name: Matrix Demo
-on: push
+on:
+  push:
+    branches:
+      - main
+      - dev
 env:
   PORT: 8080
 jobs:
@@ -26,4 +30,5 @@ jobs:
       - name: Install Dependencies
         run: npm ci
   deploy:
+    needs: build
     uses: ./.github/workflows/reusable.yml
