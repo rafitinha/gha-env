@@ -1,5 +1,7 @@
 name: Matrix Demo
 on: push
+env:
+  PORT: 8080
 jobs:
   build:
     continue-on-error: true
