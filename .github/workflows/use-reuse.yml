@@ -24,8 +24,8 @@ jobs:
     #secrets:
     # some-secret: "${{ secrets.some-secret}}"
   print-deploy-result:
-    needs: build_and_test
+    needs: reuse
     runs-on: ubuntu-latest
     steps:
       - name: Print deploy output
-        run: echo "${{ needs.build_and_test.outputs.result}}"
+        run: echo "${{ needs.reuse.outputs.result}}"
